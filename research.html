@@ -4,8 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DemTech - Research</title>
 
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
-    <script type="text/javascript" src="js/ui-bootstrap-tpls-0.6.0.min.js"></script>
+    <script type="text/javascript" src="/js/angular.min.js"></script>
+    <script type="text/javascript" src="/js/ui-bootstrap-tpls-0.6.0.min.js"></script>
 
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/main.css" rel="stylesheet" type="text/css">
@@ -15,22 +15,23 @@
     <div class="container">
 
         <div class="row">
+
             <div class="col-lg-2 col-md-2">
                 <a href="index.html" title="Frontpage of demtech.dk">
-                    <img class="img-responsive" src="img/demtech.png" alt="DemTech" style="position: absolute; clip: rect(0px, 200px, 64px, 0px);">
+                    <img class="img-responsive" src="img/demtech.png" alt="DemTech"
+                         style="position: absolute; clip: rect(0px, 200px, 45px, 0px);">
                 </a>
             </div>
-            <div class="col-lg-10 col-md-10" style="margin-top: 20px">
-                <ul class="nav nav-pills pull-right">
-                    <li><a href="about.html"><span class="glyphicon glyphicon-info-sign"></span> About</a></li>
-                    <li><a href="news.html"><span class="glyphicon glyphicon-globe"></span> News</a></li>
-                    <li class="active"><a href="research.html"><span class="glyphicon glyphicon-signal"></span> Research</a></li>
-                    <li><a href="contact.html"><span class="glyphicon glyphicon-envelope"></span> Contact</a></li>
+            <div class="col-lg-12 col-md-12" style="margin-top: 10px">
+                <ul class="nav nav-tabs">
+                    <li class="pull-right"><a href="contact.html"><span class="glyphicon glyphicon-envelope"></span> Contact</a></li>
+                    <li class="active pull-right"><a href="research.html"><span class="glyphicon glyphicon-signal"></span> Research</a></li>
+                    <li class="pull-right"><a href="news.html"><span class="glyphicon glyphicon-globe"></span> News</a></li>
+                    <li class="pull-right"><a href="about.html"><span class="glyphicon glyphicon-info-sign"></span> About</a></li>
+                    <li class="pull-right"><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
                 </ul>
             </div>
         </div>
-
-        <hr>
 
         <div class="row">
             <div class="col-lg-12 col-md-12">
@@ -43,14 +44,22 @@
             </div>
         </div>
 
+
+        <h1><span class="glyphicon glyphicon-user"></span> DemTech staff</h1>
         <hr>
 
-        <div class="row">
-            <div class="col-md-12 col-sm-12">
-                <h1><span class="glyphicon glyphicon-user"></span> DemTech staff</h1>
-            </div>
+        <div class="row" id="researchers">
             <div class="col-md-4 col-sm-6">
                 <h2>Carsten Sch&#252;rmann</h2>
+                <table>
+                    <tr><th>Position:</th> <td>Associate professor</td></tr>
+                    <tr>
+                        <th>Fields:</th>
+                        <td>
+                            <a class="label label-primary" href="researchareas.html#votingtechnology">Computer Science</a>
+                        </td>
+                    </tr>
+                </table>
                 <p>
                     Carsten...
                 </p>
@@ -60,6 +69,17 @@
             </div>
             <div class="col-md-4 col-sm-6">
                 <h2>Randi Markussen</h2>
+                <table>
+                    <tr><th>Position:</th> <td>Associate professor</td></tr>
+                    <tr>
+                        <th>Fields:</th>
+                        <td>
+                            <a class="label label-success" href="researchareas.html#sociotechnological">
+                                Socio-Technological studies
+                            </a>
+                        </td>
+                    </tr>
+                </table>
                 <p>
                     Randi
                 </p>
@@ -69,6 +89,15 @@
             </div>
             <div class="col-md-4 col-sm-6">
                 <h2>Joseph Kiniry</h2>
+                <table>
+                    <tr><th>Position:</th> <td>Professor</td></tr>
+                    <tr>
+                        <th>Fields:</th>
+                        <td>
+                            <a class="label label-primary" href="researchareas.html#votingtechnology">Computer Science</a>
+                        </td>
+                    </tr>
+                </table>
                 <p>
                     Joseph
                 </p>
