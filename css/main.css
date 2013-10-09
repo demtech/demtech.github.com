@@ -3,11 +3,19 @@ body {
     padding-top: 20px;
 }
 
+.breadcrumb {
+    margin-top: 1em;
+}
+
 .footer {
     border-top: 1px solid #eee;
     margin-top: 40px;
     padding-top: 40px;
     padding-bottom: 40px;
+}
+
+.well > h3 {
+    margin: 0.3em 0 0.1em 0;
 }
 
 /* Customize the nav-justified links to be fill the entire space of the .navbar */
