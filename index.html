@@ -1,18 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="mainApp" id="ng-app"> <!-- id="ng-app" to satisfy IE -->
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DemTech - Democratic Technologies</title>
 
     <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-route.min.js"></script>
     <script type="text/javascript" src="js/ui-bootstrap-tpls-0.6.0.min.js"></script>
+    <script type="text/javascript" src="js/routes.js"></script>
+    <script type="text/javascript" src="js/controllers.js"></script>
+
 
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
-    <div class="container">
+    <div class="container" ng-controller="NavController">
         <div class="row">
             <div class="col-lg-12 col-md-12">
                 <ul class="nav nav-tabs">
@@ -21,106 +25,25 @@
                             <img src="img/demtech_menu.png" alt="DemTech">
                         </a>
                     </li>
-                    <li class="pull-right"><a href="contact.html"><span class="glyphicon glyphicon-envelope"></span> Contact</a></li>
-                    <li class="pull-right"><a href="research.html"><span class="glyphicon glyphicon-signal"></span> Research</a></li>
-                    <li class="pull-right"><a href="about.html"><span class="glyphicon glyphicon-info-sign"></span> About</a></li>
-                    <li class="active pull-right"><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                    <li class="pull-right" ng-class="{active: isActive('/contact')}">
+                        <a href="#/contact"><span class="glyphicon glyphicon-envelope"></span> Contact</a>
+                    </li>
+                    <li class="pull-right" ng-class="{active: isActive('/research')}">
+                        <a href="#/research"><span class="glyphicon glyphicon-signal"></span> Research</a>
+                    </li>
+                    <li class="pull-right" ng-class="{active: isActive('/about')}">
+                        <a href="#/about"><span class="glyphicon glyphicon-info-sign"></span> About</a>
+                    </li>
+                    <li class="pull-right" ng-class="{active: isActive('/')}">
+                        <a href="#/"><span class="glyphicon glyphicon-home"></span> Home</a>
+                    </li>
                 </ul>
             </div>
         </div>
 
-        <div class="row text-center">
-            <div class="hidden-xs"><br><br></div>
-            <img src="img/demtech.png" alt="DemTech" title="Democratic Technology">
-        </div>
-        <div class="hidden-xs"><br><br><br></div>
+        <br>
 
-        <div class="masthead">
-            <ul class="nav nav-justified">
-                <li><a href="industry.html"><span class="glyphicon glyphicon-briefcase"></span> For industries</a></li>
-                <li><a href="government.html"><span class="glyphicon glyphicon-globe"></span> For governments</a></li>
-                <li><a href="ngo.html"><span class="glyphicon glyphicon-bullhorn"></span> For <abbr title="Non-governmental organisation">NGO</abbr>s</a></li>
-                <li><a href="academia.html"><span class="glyphicon glyphicon-signal"></span> For academia</a></li>
-            </ul>
-        </div>
-
-        <div class="hidden-xs"><br><br><br></div>
-
-        <h1 id="about" class="text-center">
-            <span class="glyphicon glyphicon-info-sign"></span> About DemTech
-        </h1>
-
-        <div class="row well well-lg">
-            <div class="col-md-7 col-sm-12 text-right">
-                <p>
-                    Computers are gradually replacing the manual parts of the electoral
-                    process. However, software systems are complex, prone to programming error, and
-                    are vulnerable to malicious attacks. If not addressed early, <em>these problems will
-                    have a negative effect on the very foundations of democracy</em>.
-                </p>
-                <br>
-                <p>
-                    DemTech provides answers on how to modernize the
-                    democratic process without jeopardizing the fundamental principles on which
-                    democracies are built.
-                    To do so, DemTech focuses on the voting technology
-                    as a whole, concentrating not only on technology and security, but also on
-                    questions related to organization, trust, and social choice.
-                </p>
-                <br>
-                <p>
-                    DemTech brings together
-                    internationally leading experts on voting technology and elections. Our
-                    international research staff collaborates, communicates, and consults with
-                    governments, administrations, industries and academics worldwide.
-                </p>
-                <br>
-                <a class="btn btn-default btn-block" href="about.html">
-                    <span class="glyphicon glyphicon-info-sign"></span>&nbsp;&nbsp;Read more about DemTech
-                </a>
-
-            </div>
-            <div class="col-md-5 col-sm-12">
-                <img src="img/cross_pixel.png" class="img-thumbnail pull-left">
-            </div>
-        </div>
-
-        <hr>
-
-        <div class="row">
-            <div class="col-md-6 col-sm-12">
-                <h2><span class="glyphicon glyphicon-globe"></span> News</h2>
-
-                <div class="well well-sm">
-                    <h3>DemTech in Norway</h3>
-                    <small class="text-info">23. September 2013</small>
-                    <p>
-                        Carsten Sch&#252;rmann, Randi Markussen and Lorena Ronquillo were present when online votes were
-                        decrypted and counted for Norwegian Parliamentary Election.
-                    </p>
-                </div>
-
-                <div class="well well-sm">
-                    <h3>Talk by Ian Brightwell</h3>
-                    <small class="text-info">12. September 2013</small>
-                    <p>
-                        <em>"Why is Internet Voting a Governance Project and not a Technology Project?"</em>
-                        <br>
-                        Ian Brightwell, the Director IT and CIO of New South Wales Electoral Commission in Australia,
-                        will give a guest talk on internet voting as a governance project. The talk will take place
-                        at the IT-University of Copenhagen the 12. September at 10:30, room 4A54.
-                    </p>
-                </div>
-                <hr>
-                <a href="news.html" class="btn btn-block btn-default" title="Visit the news archive">
-                    <span class="glyphicon glyphicon-globe"></span> Read more news</a>
-            </div>
-            <div class="col-md-6 col-sm-12">
-                <h2><span class="glyphicon glyphicon-phone"></span> DemTech on Twitter</h2>
-                <a class="twitter-timeline" href="https://twitter.com/DemTechDK" data-widget-id="383146153966989312">Tweets by @DemTechDK</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-            </div>
-        </div>
+        <div ng-view></div>
 
         <footer class="footer row text-muted">
             <div class="col-md-6">
@@ -134,7 +57,7 @@
             <div class="col-md-6 text-right">
                 Contact DemTech at
                 <a href="mailto:pr@demtech.dk" title="Send an email to DemTech">pr@demtech.dk</a>
-                or visit our <a href="contact.html" title="Contact page">contact section</a>.
+                or visit our <a href="partials/contact.html" title="Contact page">contact section</a>.
                 <br>
                 By the DemTech Research Group, <a href="http://itu.dk" title="Website of IT-University of Copenhagen">IT-University of Copenhagen</a>, Denmark
             </div>
