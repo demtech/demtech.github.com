@@ -1,6 +1,6 @@
 var mainApp = angular.module('mainApp', [
     'ngRoute',
-    'pageController'
+    'mainModule'
 ]);
 
 mainApp.config(['$routeProvider',
@@ -25,7 +25,7 @@ mainApp.config(['$routeProvider',
             }).
 
 
-            /* PARTNERS */
+            /* STAKEHOLDERS */
             when('/academia', {
                 templateUrl:'partials/academia.html'
             }).

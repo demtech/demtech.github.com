@@ -1,12 +1,11 @@
-var pageController = angular.module('pageController', []);
+var mainModule = angular.module('mainModule', []);
 
-pageController.controller('PageController', ['$scope', '$http',
+mainModule.controller('PageController', ['$scope', '$http',
     function PageController($scope, $http) {
-
     }
 ]);
 
-pageController.controller('NavController', function($scope, $location) {
+mainModule.controller('NavController', function($scope, $location) {
     $scope.isActive = function(route) {
         return route === $location.path();
     }
