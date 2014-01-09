@@ -18,6 +18,13 @@ body {
     margin: 0.3em 0 0.1em 0;
 }
 
+
+img.profile {
+    float: left;
+    margin: 0 10px 0 0;
+    width: 150px;
+}
+
 /* Customize the nav-justified links to be fill the entire space of the .navbar */
 
 .nav-justified {
